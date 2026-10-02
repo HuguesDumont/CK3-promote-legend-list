@@ -1,0 +1,6 @@
+﻿l_german:
+ pl_decision: "Legende verbreiten"
+ pl_decision_desc: "Um die Verbreitung deiner Legende zu erleichtern, findest du hier die Liste der Personen, die du um Hilfe bitten kannst."
+ pl_decision_tooltip: "Charaktere ansehen, die deine Legende verbreiten können."
+ pl_tooltip: "[recipient.GetTitledFirstName] kann deine Legende fördern."
+ pl_decision_confirm: "Liste schließen"

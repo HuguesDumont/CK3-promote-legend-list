@@ -1,0 +1,72 @@
+﻿# Mirrors ai_accept of ce1_ask_to_promote_legend_interaction (00_ce1_interactions.txt, 1.20)
+# Scope: this = recipient, scope:actor = character owning the legend
+# Version-sensitive: re-sync if the vanilla ai_accept block changes.
+pl_acceptance_score = {
+	value = -10
+
+	# Tier (same check as vanilla: primary title tier of the recipient)
+	if = { limit = { exists = primary_title primary_title = { tier = 2 } } add = -5 }
+	if = { limit = { exists = primary_title primary_title = { tier = 3 } } add = -10 }
+	if = { limit = { exists = primary_title primary_title = { tier = 4 } } add = -20 }
+	if = { limit = { exists = primary_title primary_title = { tier = 5 } } add = -30 }
+
+	# Legend quality
+	if = {
+		limit = { scope:actor.promoted_legend = { legend_quality = illustrious } }
+		add = 10
+	}
+	if = {
+		limit = { scope:actor.promoted_legend = { legend_quality = mythical } }
+		add = 20
+	}
+
+	# Opinion of the recipient towards the promoter
+	add = "opinion(scope:actor)"
+
+	# Personality
+	if = { limit = { has_trait = ambitious } add = -15 }
+	if = { limit = { has_trait = content } add = 5 }
+	if = { limit = { has_trait = stubborn } add = -10 }
+	if = { limit = { has_trait = arrogant } add = -10 }
+	if = { limit = { has_trait = humble } add = 10 }
+	if = { limit = { has_trait = trusting } add = 15 }
+	if = { limit = { has_trait = paranoid } add = -10 }
+
+	# Dread
+	if = {
+		limit = { has_dread_level_towards = { target = scope:actor level = 1 } }
+		add = intimidated_halved_reason_value
+	}
+	if = {
+		limit = { has_dread_level_towards = { target = scope:actor level = 2 } }
+		add = cowed_halved_reason_value
+	}
+
+	# War
+	if = { limit = { is_at_war = yes } add = -50 }
+
+	# Promoter maintenance too high
+	if = {
+		limit = {
+			scope:actor.promoted_legend = { legend_quality = famed }
+			monthly_character_income < famed_legend_promoter_cost
+		}
+		add = -100
+	}
+	if = {
+		limit = {
+			scope:actor.promoted_legend = { legend_quality = illustrious }
+			monthly_character_income < illustrious_legend_promoter_cost
+		}
+		add = -100
+	}
+	if = {
+		limit = {
+			scope:actor.promoted_legend = { legend_quality = mythical }
+			monthly_character_income < mythical_legend_promoter_cost
+		}
+		add = -100
+	}
+
+	if = { limit = { is_contact_of = scope:actor } add = 25 }
+}

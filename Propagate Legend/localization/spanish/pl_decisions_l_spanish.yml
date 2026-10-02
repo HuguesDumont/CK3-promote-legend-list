@@ -1,0 +1,6 @@
+﻿l_spanish:
+ pl_decision: "Propagar la leyenda"
+ pl_decision_desc: "Para facilitar la difusión de tu leyenda, aquí tienes la lista de personas a las que puedes pedir ayuda."
+ pl_decision_tooltip: "Ver los personajes que pueden propagar tu leyenda."
+ pl_tooltip: "[recipient.GetTitledFirstName] puede promover tu leyenda."
+ pl_decision_confirm: "Cerrar la lista"

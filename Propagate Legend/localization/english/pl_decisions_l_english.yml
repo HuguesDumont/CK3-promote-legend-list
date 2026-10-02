@@ -1,0 +1,6 @@
+﻿l_english:
+ pl_decision: "Propagate Legend"
+ pl_decision_desc: "To help spread your legend, here is the list of individuals you can ask for help."
+ pl_decision_tooltip: "View the characters who can propagate your legend."
+ pl_tooltip: "[recipient.GetTitledFirstName] can promote your legend."
+ pl_decision_confirm: "Close the list"

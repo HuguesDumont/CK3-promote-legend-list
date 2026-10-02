@@ -1,0 +1,6 @@
+﻿l_korean:
+ pl_decision: "전설 전파"
+ pl_decision_desc: "전설을 널리 퍼뜨리기 위해 도움을 요청할 수 있는 인물의 목록입니다."
+ pl_decision_tooltip: "전설을 전파할 수 있는 인물을 확인합니다."
+ pl_tooltip: "[recipient.GetTitledFirstName] 은(는) 당신의 전설을 홍보할 수 있습니다."
+ pl_decision_confirm: "목록 닫기"

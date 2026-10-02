@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ pl_decision: "传播传奇"
+ pl_decision_desc: "为了帮助传播你的传奇，以下是你可以请求协助的人物名单。"
+ pl_decision_tooltip: "查看能够传播你的传奇的角色。"
+ pl_tooltip: "[recipient.GetTitledFirstName] 可以推广你的传奇。"
+ pl_decision_confirm: "关闭列表"
